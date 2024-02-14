@@ -1,1 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+:root{
+  --mainWhite: #FCFDFD;
+  --mainBlack: #212121;
+  --mainPurple: #5F67F6;
+  --mainGrey: #F1F6FF;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Inter';
+  display: flex;
+  color: var(--mainBlack);
+}
+
+button{
+  font: inherit;
+}
+
+.sideBar{
+  position: sticky;
+  background-color: var(--mainWhite);
+  width: 281px;
+  height: 100vh;
+  border-right: 1px solid var(--mainBlack);
+}
+
+.main{
+  background-color: var(--mainGrey);
+  width: 100%;
+  min-height: 100%;
+}
