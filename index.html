@@ -7,24 +7,65 @@
   </head>
   <body>
     <div class="sideBar">
-      <ul class="sideBarList">
-        <li>All</li>
-        <li>Today</li>
-        <li>Week</li>
-        <li>Important</li>
-        <li>Projects
-          <ul class="projectsList">
-            <li>Work</li>
-            <li>College</li>
-          </ul>
-        </li>
-      </ul>
-      <div class="createNewButtons">
-        <button>Create new project</button>
-        <button>Create new task</button>
+      <div class="sideBarContainer">
+        <ul class="sideBarList">
+          <li>All</li>
+          <li>Today</li>
+          <li>Week</li>
+          <li>Important</li>
+          <li>Projects
+            <ul class="projectsList">
+              <li>Work</li>
+              <li>College</li>
+              <li>Get in shape</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="createNewButtons">
+          <button id="createProjectBtn">Create new project</button>
+          <button id="createTaskBtn">Create new task</button>
+        </div>
       </div>
     </div>
     <div class="main"></div>
+    <div id="projectModalBackground" class="modalBackground">
+      <div class="modal">
+        <form action="" id="projectForm">
+          <div class="inputLabelContainer">
+            <label for="projectTitle">Title:</label>
+            <input type="text" name="projectTitle" id="projectTitle" required>
+          </div>
+          <button type="submit">Create project</button>
+        </form>
+      </div>
+    </div>
+    <div id="taskModalBackground" class="modalBackground">
+      <div class="modal">
+        <form action="" id="taskForm">
+          <div class="inputLabelContainer">
+            <label for="taskTitle">Title:</label>
+            <input type="text" name="taskTitle" id="taskTitle" required>
+          </div>
+          <div class="inputLabelContainer">
+            <label for="taskDescp">Description:</label>
+            <input type="text" name="taskDescp" id="taskDescp" required>
+          </div>
+          <div class="inputLabelContainer">
+            <label for="taskDueDate">Due Date:</label>
+            <input type="date" name="taskDueDate" id="taskDueDate" required>
+          </div>
+          <div class="inputLabelContainer">
+            <label for="taskPriority">Priority:</label>
+            <select name="taskPriority" id="taskPriority">
+              <option value="volvo">Low</option>
+              <option value="saab">Medium</option>
+              <option value="opel">High</option>
+            </select>
+          </div>
+          <button type="submit">Create task</button>
+        </form>
+      </div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

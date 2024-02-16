@@ -21,18 +21,133 @@ body{
 
 button{
   font: inherit;
+  width: 255px;
+  padding: 12px 18px;
+  color: var(--mainWhite);
+  font-size: 18px;
+  background-color: var(--mainPurple);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.createNewButtons{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
 }
 
 .sideBar{
   position: sticky;
   background-color: var(--mainWhite);
-  width: 281px;
+  width: 14.64%;
   height: 100vh;
   border-right: 1px solid var(--mainBlack);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sideBarContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  height: 100vh;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .main{
   background-color: var(--mainGrey);
-  width: 100%;
+  width: 85.36%;
   min-height: 100%;
+}
+
+ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+li{
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.projectsList{
+  padding-left: 35px;
+  list-style-type: circle;
+  margin-top: 4px;
+}
+
+.projectsList li{
+  font-size: 20px;
+}
+
+.modalBackground{
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  animation-name: modalAnimation;
+  animation-duration: 0.4s;
+  background-color: #ededed;
+  height: 400px;
+  width: 330px;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal input{
+  border-radius: 5px;
+  font-size: 1.3rem;
+  font: inherit;
+  border: none;
+  padding: 0.6em;
+  width: 100%;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  color: #1c1c1c;
+}
+
+.modal button{
+  width: 100%;
+}
+
+.inputLabelContainer{
+  width: 100%;
+}
+
+#projectModalBackground .modal{
+  height: 200px;
+}
+
+@keyframes modalAnimation{
+  from{scale: 0;}
+  to{scale: 1;}
 }
