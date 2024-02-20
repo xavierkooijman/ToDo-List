@@ -88,6 +88,7 @@ li{
 }
 
 .modalBackground{
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -145,6 +146,14 @@ form{
 
 #projectModalBackground .modal{
   height: 200px;
+}
+
+li:hover{
+  color: var(--mainPurple);
+}
+
+button:hover{
+  background-color: var(--mainBlack);
 }
 
 @keyframes modalAnimation{
